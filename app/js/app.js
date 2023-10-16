@@ -64,6 +64,21 @@
 
 		$('.color__item').on('click', function(){
 			$(this).addClass('active').siblings().removeClass('active');
+
+			let active_color = $(this).attr('data-color');
+
+			$('.card').attr({'class': 'card'}).addClass(active_color);
+		});
+
+		$('.gallery__element').on('click', function(){
+			let src = $(this).find('img').attr('src');
+
+			if(src === 'undefined'){
+				$('.card__image img').attr({'src': ''});
+			} else {
+				$('.card__image img').attr({'src': src});
+			}
+			
 		});
 
 	});

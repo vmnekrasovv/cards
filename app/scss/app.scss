@@ -195,23 +195,255 @@ html, body {
 			background: linear-gradient(to bottom right, #FED760 0%, #9E761B 50%, #DFDFDF 50%, #DFDFDF 100%);
 		}
 
+		&.gold-mirror-black {
+			background: linear-gradient(to bottom right, #FED760 0%, #9E761B 50%, #040404 50%, #040404 100%);
+		}
+
+		&.black-gold-rib {
+			background: linear-gradient(113.06deg, #646464 7.79%, #393939 50.37%, #6F6F6F 96.64%);
+		}
+
+		&.silver-white {
+			background: linear-gradient(to bottom right, #bfbbb0 0%, #bfbbb0 50%, #ffffff 50%, #ffffff 100%);
+		}
+
+		&.silver-black {
+			background: linear-gradient(to bottom right, #bfbbb0 0%, #bfbbb0 50%, #000000 50%, #000000 100%);
+		}
+
+		&.gold-white {
+			background: linear-gradient(to bottom right, #b48811 0%, #b48811 50%, #ffffff 50%, #ffffff 100%);
+		}
+
+		&.gold-black {
+			background: linear-gradient(to bottom right, #b48811 0%, #b48811 50%, #000000 50%, #000000 100%);
+		}
+
+		&.rose-white-mirror {
+			background: linear-gradient(to bottom right, #976a53 0%, #976a53 50%, #ffffff 50%, #ffffff 100%);
+		}
+
+		&.rose-black-mirror {
+			background: linear-gradient(to bottom right, #976a53 0%, #976a53 50%, #000000 50%, #000000 100%);
+		}
+
+		&.rainbow-white-mirror {
+			    background: linear-gradient(to bottom right, #E60012 7%, #F39800 14%, #FFF100 21%, #009944 28%, #0068B7 35%, #1D2088 42%, #CFA7CD 50%, #ffffff 50%, #ffffff 100%);
+		}
+
+		&.rainbow-black-mirror {
+			    background: linear-gradient(to bottom right, #E60012 7%, #F39800 14%, #FFF100 21%, #009944 28%, #0068B7 35%, #1D2088 42%, #CFA7CD 50%, #000000 50%, #000000 100%);
+		}
+
+		&.silver-white-mirror {
+			background: linear-gradient(to bottom right, #C0C0C0 0%, #C0C0C0 50%, #ffffff 50%, #ffffff 100%);
+		}
+
+		&.silver-black-mirror {
+			background: linear-gradient(to bottom right, #C0C0C0 0%, #C0C0C0 50%, #000000 50%, #000000 100%);
+		}
+
+		&.blue-card {
+			background: linear-gradient(130.61deg, #1C55A2 0%, #547EB8 100%);
+		}
+
+		&.pink-card {
+			background: linear-gradient(130.61deg, #FFC0CB 0%, #FFC0CB 50%, #FFC0CB 100%);
+		}
+
+	} // color-item
+} // color
+
+
+.card {
+	position: relative;
+	width: 720px;
+	height: 450px;
+	border-radius: 10px;
+	margin-top: 70px;
+
+	&__chip {
+		width: 11.9048%;
+    	height: 15.0943%;
+   		position: absolute;
+	    top: 30.9%;
+	    left: 10.59%;
+	    z-index: 400;
+	    user-select: none;
+	    pointer-events: none;	
+   	}
+
+   	&__image {
+   		width: 100%;
+   		height: 100%;
+
+ 		img {
+ 			width: 100%;
+ 			height: 100%;
+ 			object-fit: cover;
+ 			object-position: center;
+ 		}
+   	}
+
+
+	&.black-silver {
+		background: linear-gradient(113.06deg, #040404 7.79%, #2D2E2E 50.83%, #040404 96.64%);
+		color: #f2f2f2;
+
+		.card__image img {
+			color: transparent;
+   			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+		}
 	}
-}
 
+	&.black-gold {
+		color: #d5b869;
+	    background: linear-gradient(113.06deg, #040404 7.79%, #2D2E2E 50.83%, #040404 96.64%);
 
+	    .card__image img {
+	    	color: transparent;
+    		filter: invert(71%) sepia(54%) saturate(330%) hue-rotate(6deg) brightness(95%) contrast(88%);
+	    }
+	}
 
+	&.gold-mirror {
+		color: #f2f2f2;
+	    background: linear-gradient(113.06deg, #A87234 7.79%, #FED760 30.47%, #AB7F42 55%, #D1A751 78.6%, #A0763C 96.64%);
+	
+	    .card__image img {
+			color: transparent;
+   			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+		}
+	}
 
-.card__black_silver {
-	background: linear-gradient(113.06deg, #040404 7.79%, #2D2E2E 50.83%, #040404 96.64%);
-	color: #f2f2f2;
-}
+	&.gold-mirror-black {
+		color: #202020;
+	    background: linear-gradient(113.06deg, #A87234 7.79%, #FED760 30.47%, #AB7F42 55%, #D1A751 78.6%, #A0763C 96.64%);
+	}
 
-.card__black-gold {
-	color: #d5b869;
-    background: linear-gradient(113.06deg, #040404 7.79%, #2D2E2E 50.83%, #040404 96.64%);
-}
+	&.black-gold-rib {
+		color: #d5b869;
+	    background: url('../images/cards_bg/black-rib-back.jpg') 0 0 / cover no-repeat;
 
-.card__gold-mirror {
-	color: #f2f2f2;
-    background: linear-gradient(113.06deg, #A87234 7.79%, #FED760 30.47%, #AB7F42 55%, #D1A751 78.6%, #A0763C 96.64%);
+	    .card__image img {
+	    	color: transparent;
+    		filter: invert(71%) sepia(54%) saturate(330%) hue-rotate(6deg) brightness(95%) contrast(88%);
+	    }
+	}
+
+	&.silver-white {
+		color: #f2f2f2;
+	    background: linear-gradient(161deg, #bfbbb0 0%, #bfbbb0 50%, #bfbbb0 100%);
+
+	    .card__image img {
+	    	color: transparent;
+			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+	    }
+	}
+
+	&.silver-black {
+		color: #f2f2f2;
+	    background: linear-gradient(161deg, #bfbbb0 0%, #bfbbb0 50%, #bfbbb0 100%);
+
+	    .card__image img {
+	    	color: transparent;
+	    }
+	}
+
+	&.gold-white {
+		color: #b48811;
+	    background: linear-gradient(161deg, #b48811 0%, #b48811 50%, #b48811 100%);
+
+	    .card__image img {
+	    	color: transparent;
+			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+	    }
+	}
+
+	&.gold-black {
+		color: #f2f2f2;
+	    background: linear-gradient(161deg, #b48811 0%, #b48811 50%, #b48811 100%);
+
+	    .card__image img {
+	    	color: transparent;
+	    }
+	}
+
+	&.rose-white-mirror {
+		color: #976a53;
+	    background: linear-gradient(173deg, #976a53 0%, #e7ccbb 50%, #976a53 100%);
+
+	    .card__image img {
+	    	color: transparent;
+			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+	    }
+	}
+
+	&.rose-black-mirror {
+		color: #976a53;
+	    background: linear-gradient(173deg, #976a53 0%, #e7ccbb 50%, #976a53 100%);
+
+	    .card__image img {
+	    	color: transparent;
+	    }
+	}
+
+	&.rainbow-white-mirror {
+		color: #f2f2f2;
+	    background: linear-gradient(173deg, #E60012 14%, #F39800 28%, #FFF100 42%, #009944 56%, #0068B7 70%, #1D2088 84%, #CFA7CD 100%);
+	
+	    .card__image img {
+	    	color: transparent;
+			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+	    }
+	}
+
+	&.rainbow-black-mirror {
+		color: #f2f2f2;
+	    background: linear-gradient(173deg, #E60012 14%, #F39800 28%, #FFF100 42%, #009944 56%, #0068B7 70%, #1D2088 84%, #CFA7CD 100%);
+	
+	   .card__image img {
+	    	color: transparent;
+	    }
+	}
+
+	&.silver-white-mirror {
+		color: #f2f2f2;
+   		background: linear-gradient(161deg, #C0C0C0 0%, #C0C0C0 50%, #C0C0C0 100%);
+
+   		.card__image img {
+   			color: transparent;
+			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+   		}
+	}
+
+	&.silver-black-mirror {
+		color: #f2f2f2;
+    	background: linear-gradient(161deg, #C0C0C0 0%, #C0C0C0 50%, #C0C0C0 100%);
+
+    	.card__image img {
+   			color: transparent;
+   		}
+	}
+
+	&.blue-card {
+		color: #f2f2f2;
+   		background: linear-gradient(130.61deg, #0441B7 0%, #5BB2E2 50%, #044CB7 100%);
+
+   		.card__image img {
+			color: transparent;
+   			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+		}
+	}
+
+	&.pink-card {
+		color: #FFC0CB;
+    	background: linear-gradient(130.61deg, #FFC0CB 0%, #FFC0CB 50%, #FFC0CB 100%);
+
+    	.card__image img {
+			color: transparent;
+   			filter: invert(100%) sepia(1%) saturate(3006%) hue-rotate(241deg) brightness(115%) contrast(90%);
+		}
+	}
+
 }
