@@ -22,6 +22,11 @@ let paths = {
 		dest: baseDir + '/css',
 	},
 
+	images: {
+		src:  baseDir + '/images/design/money/**/*',
+		dest: baseDir + '/images/dest/design/money',
+	},
+
 
 	dist: 'dist',
 
@@ -75,6 +80,14 @@ function styles() {
 	.pipe(browserSync.stream())
 }
 
+function images() {
+	return src(paths.images.src)
+	.pipe(newer(paths.images.dest))
+	.pipe(imagemin())
+	.pipe(dest(paths.images.dest))
+  .pipe(browserSync.stream())
+}
+
 
 function startwatch() {
 	watch(baseDir  + '/**/' + preprocessor + '/**/*', styles);
@@ -94,6 +107,7 @@ async function tt() {
 exports.browsersync = browsersync;
 exports.assets      = series(styles, scripts);
 exports.tt       	= tt;
+exports.images      = images;
 exports.styles      = styles;
 exports.scripts     = scripts;
 exports.default     = parallel(styles, scripts, browsersync, startwatch);

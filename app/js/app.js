@@ -21,9 +21,50 @@
 
 		for (let obj of category) {
 			
-			$('.category__list').append($('<div class="category__element">'+ obj.name.rus +'</div>'));
+			$('.category__list').append($('<div class="category__element" data-category="' + obj.id + '">'+ obj.name.rus +'</div>'));
 
+			for (let file of obj.files) {
+				$('.gallery__list').append($('<div class="gallery__element" data-category="' + obj.id + '"> <img src="' + obj.path + file + '">'));
+			}
 		}
+
+		/*let obj = category[1];
+
+		for(let file of obj.files){
+			$('.gallery__list').append($('<div class="gallery__element" data-category="' + obj.id + '"> <img src="' + obj.path + file + '">'));
+		}*/
+
+
+		$('.category__active').on('click', function(){
+			$('.category__list').toggleClass('active');
+		});
+
+		$('.category__element').on('click', function(){
+			$(this).addClass('active').siblings().removeClass('active');
+
+			let category = $(this).attr('data-category');
+
+			if(category == 0){
+				$('.gallery__element').removeClass('hidden');
+
+			} else {
+				$('.gallery__element').each(function(i, el){
+					if($(el).attr('data-category') == category){
+						$(el).removeClass('hidden');
+					} else {
+						$(el).addClass('hidden');
+					}
+				});
+			}
+
+			$('.category__active').html($(this).html());
+			$('.category__list').removeClass('active');
+		});
+
+
+		$('.color__item').on('click', function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		});
 
 	});
 })(jQuery);

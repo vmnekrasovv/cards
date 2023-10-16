@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cards</title>
+	<link rel="stylesheet" href="css/app.min.css">
 </head>
 <body>
 
@@ -11,7 +12,7 @@
 		
 		<div class="left">
 			
-			
+
 			<div class="configurator">
 				
 				<div class="category">
@@ -23,7 +24,10 @@
 						<div class="category__active">Все дизайны</div>
 
 						<div class="category__list">
-							<div class="category__element">Все дизайны</div>
+							
+							<div class="category__element" data-category="0">Все дизайны</div>
+
+							<!-- import category.js -->
 
 							<!-- <div class="category__element">Абстракция</div>
 							<div class="category__element">Эксклюзив</div>
@@ -47,7 +51,10 @@
 
 					<div class="gallery__list">
 						
-						<div class="gallery__element"></div>
+						<!-- import category.js -->
+						<!-- 
+							<div class="gallery__element" data-category=""><img src="">
+						-->
 
 					</div> <!-- /list -->
 
@@ -64,6 +71,32 @@
 
 
 		<div class="right">
+
+			<div class="color">
+				<div class="title">Выбери цвет</div>
+
+				<div class="color__list">
+					<div class="color__item black-silver" data-color="black-silver"></div>
+					<div class="color__item black-gold active" data-color="black-gold"></div>
+					<div class="color__item gold-mirror" data-color="gold-mirror"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+					<div class="color__item"></div>
+				</div>
+			</div>
+
+			<div class="card"></div>
 			
 		</div> <!-- /right -->
 
