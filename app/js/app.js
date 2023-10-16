@@ -73,10 +73,16 @@
 		$('.gallery__element').on('click', function(){
 			let src = $(this).find('img').attr('src');
 
-			if(src === 'undefined'){
-				$('.card__image img').attr({'src': ''});
-			} else {
-				$('.card__image img').attr({'src': src});
+
+			if (src) {
+				let img = $('<img src="'+ src +'">');
+
+				$('.card__image').html('');
+				$('.card__image').append(img);
+			} 
+
+			else {
+				$('.card__image').html('');
 			}
 			
 		});
