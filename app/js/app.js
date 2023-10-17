@@ -19,14 +19,18 @@
 			}
 		}*/
 
+		var lazyLoadInstance = new LazyLoad({ });
+
 		for (let obj of category) {
 			
 			$('.category__list').append($('<div class="category__element" data-category="' + obj.id + '">'+ obj.name.rus +'</div>'));
 
 			for (let file of obj.files) {
-				$('.gallery__list').append($('<div class="gallery__element" data-category="' + obj.id + '"> <img src="' + obj.path + file + '">'));
+				$('.gallery__list').append($('<div class="gallery__element" data-category="' + obj.id + '"> <img data-src="' + obj.path + file + '" class="lazy">'));
 			}
 		}
+
+		lazyLoadInstance.update();
 
 		/*let obj = category[1];
 

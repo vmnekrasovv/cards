@@ -12,6 +12,7 @@ let paths = {
 		src: [
 			baseDir + '/js/jquery.min.js',
 			baseDir + '/js/category.js',
+			baseDir + '/js/lazyload.min.js',
 			baseDir + '/js/app.js' // app.js. Always at the end
 		],
 		dest: baseDir + '/js',
