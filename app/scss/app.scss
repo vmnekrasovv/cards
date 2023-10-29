@@ -95,20 +95,34 @@ html, body {
 	    cursor: pointer;
 	}
 
-	&__list {
+	&__list-container {
 		display: none;
-	    position: absolute;
+		overflow-y: scroll;
+		height: 68vh;
+
+		position: absolute;
 	    top: 45px;
 	    left: 0;
 	    width: 100%;
 	    padding: 20px 20px 30px 20px;
 	    color: #eee;
 	    background: #444;
+	
 
 		&.active {
 			display: block;
 			z-index: 2;
 		}
+	}
+
+	&__list {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    padding: 20px 20px 30px 20px;
+	    color: #eee;
+	    background: #444;
 	}
 
 	&__element {

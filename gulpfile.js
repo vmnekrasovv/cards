@@ -97,7 +97,7 @@ function startwatch() {
 }
 
 async function tt() {
-  let path  = './app/images/design/anime';
+  let path  = './app/images/design/taro/';
 
   fs.readdir(path, function(err, items) {
 	let files = JSON.stringify(items);

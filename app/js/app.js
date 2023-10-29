@@ -40,7 +40,7 @@
 
 
 		$('.category__active').on('click', function(){
-			$('.category__list').toggleClass('active');
+			$('.category__list-container').toggleClass('active');
 		});
 
 		$('.category__element').on('click', function(){
@@ -62,7 +62,7 @@
 			}
 
 			$('.category__active').html($(this).html());
-			$('.category__list').removeClass('active');
+			$('.category__list-container').removeClass('active');
 		});
 
 
