@@ -192,6 +192,10 @@ html, body {
 
 		margin-top: 40px;
 	}
+
+	@media screen and (max-width: 768px) {
+		margin-top: 70px;
+	}
 }
 
 .title {
@@ -313,120 +317,27 @@ html, body {
 		padding: 20px;
 		background-color: #444;
 
-		@media screen and (max-width: 1500px) {
+		/* @media screen and (max-width: 1500px) {
 			gap: 15px;
 			justify-content: center;
-		}
-
-		@media screen and (max-width: 900px) {
-			
-			
-		}
+		} */
 
 	}
 
 	&__element {
 		width: calc(33.333% - 10px);
-		height: 90px;
 		background-color: #fff;
 		border-radius: 5px;
 		cursor: pointer;
 
-		@media screen and (max-width: 1500px) {
-			width: calc(720px / 4.5);
-			height: calc(450px / 4.5);
-		}
-
-		@media screen and (max-width: 1300px) {
-			width: calc(720px / 3.2);
-			height: calc(450px / 3.2);
-		}
-
-		@media screen and (max-width: 1200px) {
-			width: calc(720px / 3);
-			height: calc(450px / 3);
-		}
-
-		@media screen and (max-width: 1100px) {
-			width: calc(720px / 3.4);
-			height: calc(450px / 3.4);
-		}
-
-		@media screen and (max-width: 900px) {
-			width: calc(720px / 4);
-			height: calc(450px / 4);
-			margin-bottom: 0;
+		@media screen and (max-width: 768px) {
+			width: calc(50% - 8px);
 		}
 
 		@media screen and (max-width: 576px) {
-			width: calc(720px / 2);
-			height: calc(450px / 2);
+			width: calc(100%);
 		}
 
-		@media screen and (max-width: 500px) {
-			width: calc(var(--index) * 25);
-			height: calc(var(--index) * 15);
-		}
-
-		@media screen and (max-width: 450px) {
-			width: calc(var(--index) * 23);
-			height: calc(var(--index) * 14);
-		}
-
-		@media screen and (max-width: 420px) {
-			width: calc(var(--index) * 21);
-			height: calc(var(--index) * 13);
-		}
-
-		@media screen and (max-width: 376px) {
-			width: calc(var(--index) * 19);
-			height: calc(var(--index) * 12);
-		}
-
-		@media screen and (max-width: 350px) {
-			width: calc(var(--index) * 17);
-			height: calc(var(--index) * 11);
-		}
-
-		/* @media screen and (max-width: 1400px) {
-			width: calc(var(--index) * 8);
-			height: calc(var(--index) * 5);
-		}
-
-		@media screen and (max-width: 1200px) {
-			width: calc(var(--index) * 9.5);
-			height: calc(var(--index) * 6);
-		}
-
-		@media screen and (max-width: 1100px) {
-			width: calc(var(--index) * 9);
-			height: calc(var(--index) * 6);
-		}
-
-		@media screen and (max-width: 1000px) {
-			width: calc(var(--index) * 8);
-			height: calc(var(--index) * 5);
-		}
-
-		@media screen and (max-width: 900px) {
-			width: calc(var(--index) * 7.5);
-			height: calc(var(--index) * 5);
-		}
-
-		@media screen and (max-width: 800px) {
-			width: calc(var(--index) * 9);
-			height: calc(var(--index) * 6);
-		}
-
-		@media screen and (max-width: 700px) {
-			width: calc(var(--index) * 13);
-			height: calc(var(--index) * 8);
-		}
-
-		@media screen and (max-width: 600px) {
-			width: calc(var(--index) * 27);
-			height: calc(var(--index) * 17);
-		} */
 
 		img {
 			width: 100%;
@@ -544,51 +455,16 @@ html, body {
 		width: calc(100%);
 	}
 
-	@media screen and (max-width: 850px) {
-		height: 420px;
-	}
-
-	@media screen and (max-width: 800px) {
-		height: 390px;
+	@media screen and (max-width: 768px) {
 		margin-top: 100px;
 	}
 
-	@media screen and (max-width: 750px) {
-		height: 360px;
-	}
-
-	@media screen and (max-width: 700px) {
-		height: 330px;
-	}
-
-	@media screen and (max-width: 650px) {
-		height: 315px;
-	}
-
-	@media screen and (max-width: 600px) {
-		height: 285px;
+	@media screen and (max-width: 576px) {
 		margin-top: 120px;
 	}
 
-	@media screen and (max-width: 550px) {
-		height: 260px;
-	}
-
-	@media screen and (max-width: 500px) {
-		height: 240px;
-	}
-
-	@media screen and (max-width: 450px) {
-		height: 225px;
-	}
-
 	@media screen and (max-width: 400px) {
-		height: 205px;
-		margin-top: 130px;
-	}
-
-	@media screen and (max-width: 350px) {
-		height: 190px;
+		margin-top: 140px;
 	}
 
 	&__chip {

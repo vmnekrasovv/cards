@@ -77,6 +77,10 @@
 		$('.gallery__element').on('click', function(){
 			let src = $(this).find('img').attr('src');
 
+			$("body, html").animate({
+					scrollTop: 0
+				}, 500);
+
 
 			if (src) {
 				let img = $('<img src="'+ src +'">');
@@ -92,4 +96,16 @@
 		});
 
 	});
+
+
+	$(window).on('load resize', function(){
+		
+		if(this.innerWidth < 1500) {
+			let elW = $('.card').width();
+			let elH = (elW / 100) * 63; 
+
+			$('.card').height(elH);
+		}
+	});
+
 })(jQuery);
