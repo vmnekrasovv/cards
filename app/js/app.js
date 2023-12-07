@@ -39,12 +39,23 @@
 		}*/
 
 
+
 		$('.category__active').on('click', function(){
 			$('.category__list-container').toggleClass('active');
+			
+			//document.querySelector('.category__list-container').scrollTop = 0;
+
+			$(".category__list-container").animate({
+				scrollTop: 0
+			}, 500);
 		});
 
 		$('.category__element').on('click', function(){
 			$(this).addClass('active').siblings().removeClass('active');
+
+
+			let gallery = document.querySelector('.gallery__list-container');
+				gallery.scrollTop = 0;
 
 			let category = $(this).attr('data-category');
 
